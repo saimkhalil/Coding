@@ -11,20 +11,6 @@ public class RotateMatrix2
         sc = new Scanner(System.in);
     }
 
-    public void storeMatrix(int[][] ar)
-    {
-        int length = ar.length;
-        for (int p = 0; p < length; p++)
-        {
-            for (int q = 0; q < length; q++)
-            {
-                System.out.println("Enter the " +p +","+q + "index of the matrix" );
-                ar[p][q] = sc.nextInt();
-            }
-        }
-
-    }
-
     public void rotate(int[][] ar)
     {
         int i = 0;
@@ -80,10 +66,10 @@ public class RotateMatrix2
         System.out.println("Enter the value of n for a n*n matrix");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[][] ar = new int[n][n];
+
 
         RotateMatrix2 q = new RotateMatrix2();
-        q.storeMatrix(ar);
+        int[][] ar = InputUtil.inputDoubleArray(n, n);
         q.display(ar);
         q.rotate(ar);
         q.display(ar);
