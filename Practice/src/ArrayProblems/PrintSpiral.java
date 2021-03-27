@@ -23,13 +23,12 @@ public class PrintSpiral
     {
         int p = ar.length;
         storeSpiral(p);
-        displaySpiral();
 
     }
 
     public void storeSpiral(int p)
     {
-        if ( p!= 0)
+        if ( p!= 0 )
         {
             for (j = j; j < p+z; j++)
             {
@@ -69,13 +68,16 @@ public class PrintSpiral
             i++;
             p = p - 2;
             z = z + 1;
-            i = i + z;
-            j = j + z;
+            i = i + 1;
+            j = j + 1;
             if (p == 1)
             {
                 ar[i][j] = m;
                 displaySpiral();
             }
+            else if(p == 0)
+                displaySpiral();
+            else
             storeSpiral(p);
 
         }
