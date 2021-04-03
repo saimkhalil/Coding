@@ -73,6 +73,9 @@ write a program to diplay elements in spiral order square matrix n^2
 
    q3 return the middle value in a linked list in one pass
 
+
+   pending....
+
    q4 given a linked list of integers as below
 
    3 6 -9 12 -15 20 -30 
