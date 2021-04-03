@@ -99,7 +99,7 @@ public class SaimsLinkedList
         SaimsLinkedList saimsLinkedList = new SaimsLinkedList();
         Random random = new Random();
         int n = random.nextInt(15);
-        while (n < 3)
+        while (n < 5)
         {
             n = random.nextInt(15);
         }

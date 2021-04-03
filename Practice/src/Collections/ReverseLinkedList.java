@@ -2,35 +2,33 @@ package Collections;
 
 public class ReverseLinkedList
 {
-//    private Node revStart;
-//
-//    public void reverseList(Node start)
-//    {
-//        Node temp = start;
-//        reverse(start);
-//        temp.next = null;
-//
-//    }
-//
-//    private void reverse(Node start)
-//    {
-//       //write your code here.
-//        if (start == null)
-//            return;
-//
-//        reverse(start.next);
-//
-//        if (start.next == null)
-//        {
-//            revStart = start;
-//            return;
-//        }
-//        start.next.next = start;
-//    }
+    private Node revStart;
 
-
-    public void reverse(Node start)
+    public void reverseList(Node start)
     {
+        Node temp = start;
+        reverse(start);
+        temp.next = null;
+
+    }
+
+    private void reverse(Node start)
+    {
+       //write your code here.
+        if (start.next == null)
+        {
+            revStart = start;
+            return;
+        }
+
+        reverse(start.next);
+        start.next.next = start;
+    }
+
+
+    public Node reversee(Node start)
+    {
+        Node start1 = start;
         Node t1 = start;
         Node t2 = t1.next;
 
@@ -38,13 +36,14 @@ public class ReverseLinkedList
         {
             t1 = t2;
             t2 = t2.next;
-            start = t1.next;
-            start = start.next;
-        }
-        t1 = t2.next;
-        start = t2;
+            t1.next = start1;
+            start1 = t1;
 
-        display(start);
+        }
+        t2.next = t1;
+        start.next = null;
+
+        return (t2);
 
 
     }
@@ -67,7 +66,7 @@ public class ReverseLinkedList
         System.out.println("Before Reversing...");
         reverseLinkedList.display(start);
         System.out.println("After reversing...");
-        reverseLinkedList.reverse(start);
+        reverseLinkedList.display(reverseLinkedList.reversee(start));
 //        reverseLinkedList.reverseList(start);
 //        reverseLinkedList.display(reverseLinkedList.revStart);
 
