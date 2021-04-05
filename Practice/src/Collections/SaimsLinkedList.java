@@ -84,7 +84,7 @@ public class SaimsLinkedList
          return this.count;
      }
 
-     public void display()
+     public  void display()
      {
          Node temp = head;
          while (temp != null)
@@ -93,6 +93,29 @@ public class SaimsLinkedList
              temp = temp.next;
          }
      }
+
+    public static void display1(Node head)
+{
+    Node temp = head;
+    while (temp != null)
+    {
+        System.out.print(temp.data + "\t");
+        temp = temp.next;
+    }
+    System.out.println();
+}
+
+    public int getSize(Node head)
+    {
+        int count = 1;
+        Node temp = head;
+        while (temp.next != null)
+        {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
 
     public static Node getRandomLinkedList()
     {
