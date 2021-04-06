@@ -11,4 +11,6 @@ package Collections;
     int size();
 
     T peek();
+
+    void display();
 }
