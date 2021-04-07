@@ -1,4 +1,4 @@
-package Collections;
+package StackAndQueue;
 
  interface Stack<T>
 {

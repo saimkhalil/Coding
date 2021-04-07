@@ -1,4 +1,4 @@
-package Collections;
+package StackAndQueue;
 
 public class ValueOfExpression
 {

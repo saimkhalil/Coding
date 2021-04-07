@@ -1,4 +1,4 @@
-package Collections;
+package StackAndQueue;
 
 import java.util.Random;
 //to check
@@ -15,7 +15,7 @@ public class FindMaximum
         {
             stack.push(random.nextInt(99));
 
-            if (stack.peek() > max)
+            if (stack.peek() >= max)
             {
                 max = stack.peek();
                 stack1.push(max);
@@ -48,7 +48,8 @@ public class FindMaximum
     {
            FindMaximum findMaximum = new FindMaximum();
            int max = findMaximum.getMaximum();
-        System.out.println("----------------------");
-        System.out.println(max);
+
+           System.out.println("----------------------");
+           System.out.println(max);
     }
 }

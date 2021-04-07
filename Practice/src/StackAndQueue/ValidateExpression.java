@@ -1,4 +1,4 @@
-package Collections;
+package StackAndQueue;
 
 import java.util.Scanner;
 
