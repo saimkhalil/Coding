@@ -58,6 +58,17 @@ public class QueueImpl<T> implements Queue<T>
         queue.enqueue(7);
         queue.enqueue(8);
         queue.enqueue(6);
-        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());//7
+        queue.enqueue(9);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        System.out.println(queue.dequeue());//8
+        System.out.println(queue.dequeue());//6
+        System.out.println(queue.dequeue());//9
+        System.out.println(queue.dequeue());//2
+        System.out.println(queue.isEmpty());//false
+        System.out.println(queue.dequeue());//3
+        System.out.println(queue.isEmpty());//true
     }
 }
