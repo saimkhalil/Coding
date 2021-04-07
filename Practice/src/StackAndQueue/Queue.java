@@ -2,7 +2,10 @@ package StackAndQueue;
 
 interface Queue<T>
 {
-    public void enqueue(T t);
+    void enqueue(T t);
 
-    public T dequeue();
+    T dequeue();
+
+    boolean isEmpty();
+
 }
