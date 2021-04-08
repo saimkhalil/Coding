@@ -48,15 +48,33 @@ public class QueueWithStackImpl<T> implements Queue<T>
 
     public static void main(String[] args)
     {
-        Queue<Integer> queue = new QueueWithStackImpl<>();
+//        Queue<Integer> queue = new QueueWithStackImpl<>();
+//        System.out.println(queue.isEmpty());//true
+//        queue.enqueue(7);
+//        queue.enqueue(8);
+//        queue.enqueue(6);
+//        System.out.println(queue.dequeue());//7
+//        queue.enqueue(9);
+//        queue.enqueue(2);
+//        queue.enqueue(3);
+//
+//        System.out.println(queue.dequeue());//8
+//        System.out.println(queue.dequeue());//6
+//        System.out.println(queue.dequeue());//9
+//        System.out.println(queue.dequeue());//2
+//        System.out.println(queue.isEmpty());//false
+//        System.out.println(queue.dequeue());//3
+//        System.out.println(queue.isEmpty());//true
+
+        Queue<String> queue = new QueueWithStackImpl<>();
         System.out.println(queue.isEmpty());//true
-        queue.enqueue(7);
-        queue.enqueue(8);
-        queue.enqueue(6);
+        queue.enqueue("saim");
+        queue.enqueue("is");
+        queue.enqueue("the");
         System.out.println(queue.dequeue());//7
-        queue.enqueue(9);
-        queue.enqueue(2);
-        queue.enqueue(3);
+        queue.enqueue("best");
+        queue.enqueue("in");
+        queue.enqueue("the");
 
         System.out.println(queue.dequeue());//8
         System.out.println(queue.dequeue());//6

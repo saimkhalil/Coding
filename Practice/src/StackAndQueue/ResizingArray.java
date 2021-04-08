@@ -15,11 +15,12 @@ public class ResizingArray<T>
 
     public void push(T t)
     {
-        if (size == ar.length-1 && size > 0)
+        if (size == ar.length && size > 0)
         {
             ar = resize(2 * ar.length);
         }
-        t = ar[size++];
+        t = ar[size - 1];
+        size++;
     }
 
     private T[] resize(int n)
@@ -31,13 +32,36 @@ public class ResizingArray<T>
 
     public T pop()
     {
-        T val = ar[size];
+        T val = ar[size-1];
         size--;
         if (size == ar.length/4)
         {
             resize(ar.length/2);
         }
         return val;
+    }
+
+    public static void main(String[] args)
+    {
+        ResizingArray<Integer> array = new ResizingArray<Integer>();
+        array.push(7);
+        array.push(8);
+        array.push(6);
+        array.push(9);
+        array.push(9);
+        array.push(4);
+        array.push(8);
+        array.push(4);
+        array.push(7);
+        array.push(4);
+        System.out.println(array.pop());
+        System.out.println(array.pop());
+        System.out.println(array.pop());
+        System.out.println(array.pop());
+        array.push(19);
+        System.out.println(array.pop());
+        System.out.println(array.pop());
+        System.out.println(array.pop());
     }
 
 
