@@ -4,14 +4,15 @@ import java.util.*;
 
 public class Simpsons implements Comparable<Simpsons>
 {
-    String name;
-    int marks;
+    public String name;
+    public int marks;
     public Simpsons(String name, int marks)
     {
         this.name = name;
         this.marks = marks;
     }
 
+    @Override
     public String toString()
     {
         return ("[ marks= " + marks + ", name= " + name + "]");
@@ -22,13 +23,12 @@ public class Simpsons implements Comparable<Simpsons>
     {
         //return this.name.compareTo(o.name);
         if (this.marks < o.marks) return 1;
+
         else if (this.marks > o.marks) return -1;
+
         else return 0;
 
-
     }
-
-
 
     public static void main(String[] args)
     {
@@ -48,14 +48,14 @@ public class Simpsons implements Comparable<Simpsons>
 
         System.out.println("--------------------------->");
 
-        Collections.sort(list, new SortByName());
+        SimpsonsComparator c1 = new SimpsonsComparator();
+
+        Collections.sort(list, c1);
 
         for (Simpsons k : list)
         {
             System.out.println(k.toString());
         }
-
-
     }
 
 

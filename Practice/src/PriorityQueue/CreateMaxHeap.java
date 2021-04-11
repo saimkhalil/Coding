@@ -1,10 +1,10 @@
 package PriorityQueue;
 
-public class HeapSort
+public class CreateMaxHeap
 {
     int[] ar;
 
-    HeapSort(int [] ar)
+    CreateMaxHeap(int [] ar)
     {
         this.ar = ar;
     }
@@ -46,6 +46,7 @@ public class HeapSort
         }
     }
 
+
     public void createMaxHeap()
     {
         int length = ar.length;
@@ -61,7 +62,7 @@ public class HeapSort
     public static void main(String[] args)
     {
         int[] ar = {7 ,14 ,9 ,6 ,3 ,11 ,17 ,9 ,6 ,19};
-        HeapSort nMaxValues = new HeapSort(ar);
+        CreateMaxHeap nMaxValues = new CreateMaxHeap(ar);
         nMaxValues.createMaxHeap();
 
         for (int i = 0; i < ar.length; i++)
@@ -69,7 +70,5 @@ public class HeapSort
             System.out.print(ar[i] + "\t");
         }
         System.out.println();
-
-
     }
 }

@@ -2,7 +2,7 @@ package ComparableComparator;
 
 import java.util.Comparator;
 
-public class SortByName implements Comparator<Simpsons>
+public class SimpsonsComparator implements Comparator<Simpsons>
 {
         @Override
         public int compare(Simpsons o1, Simpsons o2)
