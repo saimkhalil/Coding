@@ -18,10 +18,16 @@ public class AddLinkedLists
 
             current.next = new Node(digit);
             current = current.next;
+
             if (t1 != null)
-            t1 = t1.next;
+            {
+                t1 = t1.next;
+            }
+
             if (t2 != null)
-            t2 = t2.next;
+            {
+                t2 = t2.next;
+            }
         }
 
         return result.next;
@@ -134,7 +140,7 @@ public class AddLinkedLists
             sb.append(" --> ");
             head = head.next;
         }
-        sb.append(" --> ");
+
         sb.append("null");
 
         return sb.toString();
